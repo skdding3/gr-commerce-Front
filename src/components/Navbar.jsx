@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-// 왼쪽 컴포넌트
+// 왼쪽 컨테이너
 const Left = styled.div`
   flex: 1;
   display: flex;
@@ -34,13 +34,22 @@ const Language = styled.span`
   cursor: pointer;
 `;
 
-const Input = styled.input``;
+const Input = styled.input`
+  border: none;
+`;
 
-// 센터 컴포넌트
+// 센터 컨테이너
 
 const Center = styled.div`
   flex: 1;
+  text-align: center;
 `;
+
+const Logo = styled.h1`
+  font-weight: bolder;
+`;
+
+// 오른쪽 컨테이너
 const Right = styled.div`
   flex: 1;
 `;
@@ -49,6 +58,7 @@ function Navbar() {
   return (
     <Container>
       <Wrapper>
+        {/* 왼쪽 컨테이너 */}
         <Left>
           <Language>KR</Language>
           <SearchContainer>
@@ -56,7 +66,11 @@ function Navbar() {
             <Search />
           </SearchContainer>
         </Left>
-        <Center>Center</Center>
+        {/* 센터 컨테이너 */}
+        <Center>
+          <Logo>GR</Logo>
+        </Center>
+        {/* 오른쪽 컨테이너 */}
         <Right>Right</Right>
       </Wrapper>
     </Container>
