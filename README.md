@@ -9,12 +9,12 @@
         <td align="center" width="150px">
             <a href="https://github.com/skdding3"><img height="120px" width="120px" src="https://avatars.githubusercontent.com/u/83565313?v=4"/></a>
             <br />
-            <strong>김선기</strong> -프론트 리더-
+            <strong>김선기</strong> -프론트-
         </td>
             <td align="center" width="150px">
-            <a href="https://github.com/ljs7463"><img height="120px" width="120px" src="https://avatars.githubusercontent.com/u/66814045?v=4"/></a>
+            <a href="https://github.com/DamiSoh"><img height="120px" width="120px" src="https://avatars.githubusercontent.com/u/66814045?v=4"/></a>
             <br />
-            <strong>소담</strong> -백엔드 리더-
+            <strong>소담</strong> -백엔드-
         </td>
     </tr>
     <tr height="50px">
