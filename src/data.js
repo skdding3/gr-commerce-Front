@@ -21,3 +21,21 @@ export const sliderItems = [
     bg: "f8f9fb",
   },
 ];
+
+export const categories = [
+  {
+    id: 1,
+    img: "https://images.unsplash.com/photo-1513188732907-5f732b831ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    title: "Shoes",
+  },
+  {
+    id: 2,
+    img: "https://images.unsplash.com/photo-1618453292507-4959ece6429e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+    title: "Clothes",
+  },
+  {
+    id: 3,
+    img: "https://images.unsplash.com/photo-1516731415730-0c607149933a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    title: "Accessory",
+  },
+];
