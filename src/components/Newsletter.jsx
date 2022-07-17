@@ -9,7 +9,7 @@ const InputContainer = styled.div``;
 const Input = styled.input``;
 const Button = styled.button``;
 
-function NewsLetter() {
+function Newsletter() {
   return (
     <Container>
       <Title>Newsletter</Title>
@@ -24,4 +24,4 @@ function NewsLetter() {
   );
 }
 
-export default NewsLetter;
+export default Newsletter;
