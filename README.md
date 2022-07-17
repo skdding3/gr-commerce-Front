@@ -16,6 +16,12 @@
             <br />
             <strong>소담</strong> -백엔드-
         </td>
+        </td>
+            <td align="center" width="150px">
+            <a href="https://github.com/Gilbert9172"><img height="120px" width="120px" src="https://avatars.githubusercontent.com/u/83274792?v=4"/></a>
+            <br />
+            <strong>정길준</strong> -백엔드-
+        </td>
     </tr>
     <tr height="50px">
         <td align="center">
@@ -38,3 +44,5 @@ React
  ㄴstyled components
  ㄴmaterial UI
 ```
+
+Front 작업기 : https://velog.io/@skdding3/series/React-Project
