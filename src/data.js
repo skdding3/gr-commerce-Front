@@ -65,8 +65,4 @@ export const popularProducts = [
     id: 6,
     img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/57808ef0-8826-43dc-8dc9-ea9251c0641a/elite-all-court-8p-basketball-Gvslv6.png",
   },
-  {
-    id: 7,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1SbKIoGX4dLVieRE_3Hh7bCjv8ezVj0aBGs7wtiR0AlhQb-806LMWtCkJGljbxiAlOWI&usqp=CAU",
-  },
 ];
