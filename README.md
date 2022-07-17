@@ -32,6 +32,10 @@
             <a href="https://github.com/DamiSoh"> GitHub</a>
             <br />
         </td>
+        <td align="center">
+            <a href="https://github.com/Gilbert9172"> GitHub</a>
+            <br />
+        </td>
     </tr>
 </table>
 
