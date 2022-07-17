@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 const Image = styled.img`
   width: 100%;
-  height: 50%;
+  height: 100%;
   object-fit: cover;
 `;
 const Info = styled.div`
@@ -17,7 +17,7 @@ const Info = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
