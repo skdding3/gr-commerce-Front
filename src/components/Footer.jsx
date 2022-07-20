@@ -1,4 +1,11 @@
-import { Instagram, Facebook, Twitter } from "@mui/icons-material";
+import {
+  Instagram,
+  Facebook,
+  Twitter,
+  Room,
+  PhoneIphone,
+  Email,
+} from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
 
@@ -9,10 +16,15 @@ const Left = styled.div`
   flex: 1;
 `;
 
+// 로고 및 정보
+
 const Logo = styled.h1``;
 const Desc = styled.p`
   margin: 20px 0px;
 `;
+
+// 아이콘 컨테이너
+
 const SocialContainer = styled.div`
   display: flex;
 `;
@@ -21,6 +33,7 @@ const SocialIcon = styled.div`
   height: 40px;
   border-radius: 50%;
   color: white;
+  // 아이콘 별 색상 적용 (props)
   background-color: #${(props) => props.color};
   display: flex;
   align-items: center;
@@ -33,16 +46,31 @@ const Center = styled.div`
   padding: 20px;
 `;
 
-const Title = styled.h3``;
+const Title = styled.h3`
+  margin-bottom: 30px;
+`;
 
-const List = styled.ul``;
+// 항목 보기
 
-const ListItem = styled.li``;
+const List = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const ListItem = styled.li`
+  width: 50%;
+  margin-bottom: 10px;
+`;
 
 const Right = styled.div`
   flex: 1;
   padding: 20px;
 `;
+
+const ContactItem = styled.div``;
 
 function Footer() {
   return (
@@ -71,7 +99,21 @@ function Footer() {
           <ListItem>Clothes</ListItem>
         </List>
       </Center>
-      <Right></Right>
+      <Right>
+        <Title>Contact</Title>
+        <ContactItem>
+          <Room />
+          서울시 극락구 극락동
+        </ContactItem>
+        <ContactItem>
+          <PhoneIphone />
+          +82 10 7502 5680
+        </ContactItem>
+        <ContactItem>
+          <Email />
+          skdding3@gmail.com
+        </ContactItem>
+      </Right>
     </Container>
   );
 }
