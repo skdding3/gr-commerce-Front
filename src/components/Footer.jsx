@@ -70,7 +70,15 @@ const Right = styled.div`
   padding: 20px;
 `;
 
-const ContactItem = styled.div``;
+const ContactItem = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+`;
+
+const Payment = styled.img`
+  width: 50%;
+`;
 
 function Footer() {
   return (
@@ -94,25 +102,30 @@ function Footer() {
         <Title>항목 보기</Title>
         <List>
           <ListItem>Home</ListItem>
-          <ListItem>카테고리</ListItem>
+          <ListItem>Cart</ListItem>
           <ListItem>Shoes</ListItem>
           <ListItem>Clothes</ListItem>
+          <ListItem>Accessory</ListItem>
+          <ListItem>My Account</ListItem>
+          <ListItem>찜 리스트</ListItem>
+          <ListItem>배송 조회</ListItem>
         </List>
       </Center>
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room />
+          <Room style={{ marginRight: "10px" }} />
           서울시 극락구 극락동
         </ContactItem>
         <ContactItem>
-          <PhoneIphone />
+          <PhoneIphone style={{ marginRight: "10px" }} />
           +82 10 7502 5680
         </ContactItem>
         <ContactItem>
-          <Email />
+          <Email style={{ marginRight: "10px" }} />
           skdding3@gmail.com
         </ContactItem>
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
     </Container>
   );
