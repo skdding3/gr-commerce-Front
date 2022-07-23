@@ -1,3 +1,4 @@
+import { Add, Remove } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
@@ -58,8 +59,42 @@ const FilterColor = styled.div`
 const FilterSize = styled.select`
   margin-left: 10px;
   padding: 5px;
+  border: 2px solid;
+  border-radius: 1px;
 `;
 const FilterSizeOption = styled.option``;
+const AddContainer = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+const AmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+`;
+const Amount = styled.span`
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+`;
+const Button = styled.button`
+  padding: 15px;
+  border: 3px solid;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 700;
+
+  &:hover {
+    background-color: #f8f4f4;
+  }
+`;
 
 function Product() {
   return (
@@ -74,10 +109,13 @@ function Product() {
           <Title>나이키 바람막이</Title>
           <Desc>
             나이키 윈드러너 재킷이 발수 소재와 패커블 디자인으로 업그레이드
-            되었습니다. 트임 디테일이 러닝의 열기가 더해져도 시원함을
+            되었습니다. <br />
+            뒷면과 쉐브론이 적용된 트임 디테일이 러닝의 열기가 더해져도 시원함을
             지켜줍니다.
           </Desc>
           <Price>₩ 20000</Price>
+
+          {/* 필터작업 */}
           <FilterContainer>
             <Filter>
               <FilterTitle>색상</FilterTitle>
@@ -96,6 +134,16 @@ function Product() {
               </FilterSize>
             </Filter>
           </FilterContainer>
+
+          {/* 수량추가 */}
+          <AddContainer>
+            <AmountContainer>
+              <Add />
+              <Amount>1</Amount>
+              <Remove />
+            </AmountContainer>
+            <Button>장바구니 추가</Button>
+          </AddContainer>
         </InfoContainer>
       </Wrapper>
       <Newsletter />
