@@ -43,10 +43,8 @@
 
 ---
 
-```
-React
- ㄴstyled components
- ㄴmaterial UI
-```
+
+![Stack](https://user-images.githubusercontent.com/83565313/180651358-7c153f5a-e6bb-4d67-9568-72bd1135dccc.png)
+
 
 Front 작업기 : https://velog.io/@skdding3/series/React-Project
