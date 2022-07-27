@@ -27,14 +27,14 @@ const Input = styled.input`
   justify-content: center;
   align-items: center;
   min-width: 40;
-  margin: 20px 50px 10px 0px;
+  margin: 30px 50px 10px 0px;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid;
 `;
 const Button = styled.button`
-  margin: 50px;
+  margin: 30px;
   padding: 15px;
   border: 2px solid;
   background-color: white;
@@ -46,7 +46,12 @@ const Button = styled.button`
   }
 `;
 
-const Link = styled.a``;
+const Link = styled.a`
+  margin: 5px 0px;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+`;
 
 function Login() {
   return (
