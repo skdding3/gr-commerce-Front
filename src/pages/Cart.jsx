@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Announcement from "../components/Announcement";
+import { Add, Remove } from "@mui/icons-material";
 
 const Container = styled.div``;
 const Wrapper = styled.div``;
@@ -55,10 +56,41 @@ const Details = styled.div`
 `;
 const ProductName = styled.span``;
 const ProductId = styled.span``;
-const ProductColor = styled.div``;
+const ProductColor = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: ${(props) => props.color};
+  cursor: pointer;
+`;
 const ProductSize = styled.span``;
 const PriceDetail = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ProductAmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+`;
+const ProductAmount = styled.div`
+  font-weight: 700;
+  font-size: 24px;
+  margin: 5px;
+`;
+const ProductPrice = styled.div`
+  font-size: 30px;
+  font-weight: 200;
+`;
+
+const Hr = styled.hr`
+  background-color: black;
+  border: none;
+  height: 1px;
 `;
 
 const Summary = styled.div`
@@ -92,13 +124,46 @@ function Cart() {
                   <ProductId>
                     <b>ID:</b> 123
                   </ProductId>
-                  <ProductColor />
+                  <ProductColor color="black" />
                   <ProductSize>
                     <b>SIZE:</b> 270
                   </ProductSize>
                 </Details>
               </ProductDetail>
-              <PriceDetail>price</PriceDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <Add />
+                  <ProductAmount>2</ProductAmount>
+                  <Remove />
+                </ProductAmountContainer>
+                <ProductPrice>₩ 20000</ProductPrice>
+              </PriceDetail>
+            </Product>
+            <Hr />
+            <Product>
+              <ProductDetail>
+                <Image src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DM0573-002/59301e36-89ab-4d96-b611-02990e50067e_primary.jpg?zoom" />
+                <Details>
+                  <ProductName>
+                    <b>Product:</b> 나이키 에어포스 1 리액트
+                  </ProductName>
+                  <ProductId>
+                    <b>ID:</b> 123
+                  </ProductId>
+                  <ProductColor color="black" />
+                  <ProductSize>
+                    <b>SIZE:</b> 270
+                  </ProductSize>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <Add />
+                  <ProductAmount>2</ProductAmount>
+                  <Remove />
+                </ProductAmountContainer>
+                <ProductPrice>₩ 20000</ProductPrice>
+              </PriceDetail>
             </Product>
           </Info>
           <Summary>Summary</Summary>
