@@ -95,7 +95,16 @@ const Hr = styled.hr`
 
 const Summary = styled.div`
   flex: 1;
+  border: 0.5px soild lightgray;
+  border-radius: 10px;
+  padding: 20px;
 `;
+
+const SummaryTitle = styled.h1``;
+const SummaryItem = styled.div``;
+const SummaryItemText = styled.span``;
+const SummaryItemPrice = styled.span``;
+const Button = styled.button``;
 
 function Cart() {
   return (
@@ -136,7 +145,7 @@ function Cart() {
                   <ProductAmount>2</ProductAmount>
                   <Remove />
                 </ProductAmountContainer>
-                <ProductPrice>₩ 20000</ProductPrice>
+                <ProductPrice>₩ 10000</ProductPrice>
               </PriceDetail>
             </Product>
             <Hr />
@@ -166,7 +175,26 @@ function Cart() {
               </PriceDetail>
             </Product>
           </Info>
-          <Summary>Summary</Summary>
+          <Summary>
+            <SummaryTitle>주문 내역</SummaryTitle>
+            <SummaryItem>
+              <SummaryItemText>주문 총계</SummaryItemText>
+              <SummaryItemPrice>₩ 40000</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>배송료</SummaryItemText>
+              <SummaryItemPrice>₩ 4000</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>배송 할인</SummaryItemText>
+              <SummaryItemPrice>₩ -4000</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText type="total">결제할 금액</SummaryItemText>
+              <SummaryItemPrice>₩ 40000</SummaryItemPrice>
+            </SummaryItem>
+            <Button>결제 하기</Button>
+          </Summary>
         </Bottom>
       </Wrapper>
       <Footer />
