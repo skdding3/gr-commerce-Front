@@ -98,13 +98,29 @@ const Summary = styled.div`
   border: 0.5px soild lightgray;
   border-radius: 10px;
   padding: 20px;
+  height: 50vh;
 `;
 
-const SummaryTitle = styled.h1``;
-const SummaryItem = styled.div``;
+const SummaryTitle = styled.h1`
+  font-weight: 500;
+`;
+const SummaryItem = styled.div`
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${(props) => props.type === "total" && "500"};
+  font-size: ${(props) => props.type === "total" && "24px"};
+`;
 const SummaryItemText = styled.span``;
 const SummaryItemPrice = styled.span``;
-const Button = styled.button``;
+const Button = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+`;
 
 function Cart() {
   return (
@@ -189,8 +205,8 @@ function Cart() {
               <SummaryItemText>배송 할인</SummaryItemText>
               <SummaryItemPrice>₩ -4000</SummaryItemPrice>
             </SummaryItem>
-            <SummaryItem>
-              <SummaryItemText type="total">결제할 금액</SummaryItemText>
+            <SummaryItem type="total">
+              <SummaryItemText>결제할 금액</SummaryItemText>
               <SummaryItemPrice>₩ 40000</SummaryItemPrice>
             </SummaryItem>
             <Button>결제 하기</Button>
