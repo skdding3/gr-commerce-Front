@@ -3,9 +3,11 @@ import styled from "styled-components";
 import { Search } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
+  ${mobile({ display: "none" })}
 `;
 
 // 컨테이너 위치 구성
@@ -14,6 +16,7 @@ const Wrapper = styled.div`
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
+  ${mobile({ padding: "10px 0px" })}
 `;
 
 // 왼쪽 컨테이너
@@ -34,10 +37,12 @@ const SearchContainer = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  ${mobile({ display: "none" })}
 `;
 
 const Input = styled.input`
   border: none;
+  ${mobile({ width: "50px" })}
 `;
 
 // 센터 컨테이너
@@ -49,6 +54,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bolder;
+  ${mobile({ fontSize: "24px" })}
 `;
 
 // 오른쪽 컨테이너
@@ -57,12 +63,14 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px; // 간격 수정
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
 function Navbar() {
@@ -73,7 +81,7 @@ function Navbar() {
         <Left>
           <Language>KR</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="상품 검색" />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
