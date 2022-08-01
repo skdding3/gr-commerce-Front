@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -43,11 +44,14 @@ const Button = styled.button`
 function CategoryItem({ item }) {
   return (
     <Container>
-      <Image src={item.img} />
-      <Info>
-        <Title>{item.title}</Title>
-        <Button>지금 쇼핑하기</Button>
-      </Info>
+      {/* 라우팅 작업 카테고리 별로 나누어 뿌려준다 */}
+      <Link to={`/products/${item.cat}`}>
+        <Image src={item.img} />
+        <Info>
+          <Title>{item.title}</Title>
+          <Button>지금 쇼핑하기</Button>
+        </Info>
+      </Link>
     </Container>
   );
 }
