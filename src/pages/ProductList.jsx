@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
@@ -6,6 +6,7 @@ import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
+import { useLocation } from "react-router-dom";
 
 const Container = styled.div``;
 const Title = styled.h1`
@@ -36,6 +37,18 @@ const Select = styled.select`
 const Option = styled.option``;
 
 function ProductList() {
+  const location = useLocation();
+  const cat = location.pathname.split("/")[2];
+  const [filter, setFilters] = useState({});
+  const [sort, setSort] = useState("신상품순");
+
+  const handleFilters = (e) => {
+    const value = e.target.value;
+    setFilters({
+      ...filter,
+      [e.target.name]: value, // color : red
+    });
+  };
   return (
     <Container>
       <Announcement />
@@ -44,10 +57,9 @@ function ProductList() {
       <FilterContainer>
         <Filter>
           <FilterText>필터</FilterText>
-          <Select>
-            <Option disabled selected>
-              색상
-            </Option>
+          {/* 선택한 value와 text 값으로 변경해주는 동적코드 */}
+          <Select name="color" onChange={handleFilters}>
+            <Option disabled>색상</Option>
             <Option>흰색</Option>
             <Option>검은색</Option>
             <Option>파란색</Option>
@@ -55,10 +67,8 @@ function ProductList() {
             <Option>노랑색</Option>
             <Option>초록색</Option>
           </Select>
-          <Select>
-            <Option disabled selected>
-              사이즈
-            </Option>
+          <Select name="size" onChange={handleFilters}>
+            <Option disabled>사이즈</Option>
             <Option>XS</Option>
             <Option>S</Option>
             <Option>M</Option>
@@ -68,10 +78,10 @@ function ProductList() {
         </Filter>
         <Filter>
           <FilterText>정렬</FilterText>
-          <Select>
-            <Option selected>신상품순</Option>
-            <Option>가격 높은 순</Option>
-            <Option>가격 낮은 순</Option>
+          <Select onChange={(e) => setSort(e.target.value)}>
+            <Option value={"newest"}>신상품순</Option>
+            <Option value={"ase"}>가격 높은 순</Option>
+            <Option value={"desc"}>가격 낮은 순</Option>
           </Select>
         </Filter>
       </FilterContainer>
