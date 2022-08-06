@@ -39,13 +39,13 @@ const Option = styled.option``;
 function ProductList() {
   const location = useLocation();
   const cat = location.pathname.split("/")[2];
-  const [filter, setFilters] = useState({});
+  const [filters, setFilters] = useState({});
   const [sort, setSort] = useState("신상품순");
 
   const handleFilters = (e) => {
     const value = e.target.value;
     setFilters({
-      ...filter,
+      ...filters,
       [e.target.name]: value, // color : red
     });
   };
@@ -85,7 +85,7 @@ function ProductList() {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products />
+      <Products cat={cat} filters={filters} sort={sort} />
       <Newsletter />
       <Footer />
     </Container>
