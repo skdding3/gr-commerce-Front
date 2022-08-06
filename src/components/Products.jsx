@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import styled from "styled-components";
 import { popularProducts } from "../data";
@@ -10,7 +11,19 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-function Products() {
+function Products({ cat, filters, sort }) {
+  const [products, setProducts] = useState([]);
+  const [filteredProduct, setFilteredProduct] = useState([]);
+
+  // axios 세팅
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const response = await axios.get("http");
+      } catch (err) {}
+    };
+  }, [cat]);
+
   return (
     <Container>
       {popularProducts.map((item) => (
