@@ -19,8 +19,10 @@ function Products({ cat, filters, sort }) {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await axios.get("http");
+        const response = await axios.get("http://localhost:3000/api/products");
+        console.log(res);
       } catch (err) {}
+      getProducts();
     };
   }, [cat]);
 
