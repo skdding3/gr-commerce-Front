@@ -16,13 +16,14 @@ function Products({ cat, filters, sort }) {
   const [filteredProduct, setFilteredProduct] = useState([]);
 
   // axios 세팅
+  // 08.23 backend랑 같이 빌드 성공 -> 과제: api 호출 협의후 확인
   useEffect(() => {
     const getProducts = async () => {
       try {
         const res = await axios.get(
           cat
-            ? `http://localhost:3000/api/products?category=${cat}`
-            : "http://localhost:3000/api/products"
+            ? `http://localhost:8081/api/products?category=${cat}`
+            : "http://localhost:8081/api/products"
         );
         console.log(res);
       } catch (err) {}
