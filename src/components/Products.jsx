@@ -23,7 +23,10 @@ function Products({ cat, filters, sort }) {
         const res = await axios.get(
           cat
             ? `http://localhost:8081/api/products?category=${cat}`
-            : "http://localhost:8081/api/products"
+            : "http://localhost:8081/api/products",
+            {headers : {
+              Authorization : `Bearer ${accessToken}`
+              }}
         );
         console.log(res);
       } catch (err) {}
